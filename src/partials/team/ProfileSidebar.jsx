@@ -21,7 +21,6 @@ const ProfileSidebar = () => {
       id="profile-sidebar"
       className={`absolute z-20 top-0 bottom-0 w-full md:w-auto md:static md:top-auto md:bottom-auto -mr-px md:translate-x-0 transform transition-transform duration-200 ease-in-out ${profileSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
     >
-      {console.log(qurans)}
       <div className="sticky top-16 bg-white overflow-x-hidden overflow-y-auto no-scrollbar shrink-0 border-r border-slate-200 md:w-72 xl:w-80 h-[calc(100vh-64px)]">
 
         {/* Profile group */}
@@ -43,7 +42,7 @@ const ProfileSidebar = () => {
             <div className="mt-4">
               <div className="text-xs font-semibold text-slate-400 uppercase mb-3">List Data</div>
               <ul className="mb-6">
-                {Object.values(qurans.data).map((item,index) => {
+                {qurans.length === 0 ? 'Fetching Data...' : Object.values(qurans.data).map((item,index) => {
                   return (
                      <li className="-mx-2" key={index}>
                        <button className="w-full p-2 rounded hover:bg-indigo-50" onClick={() => setProfileSidebarOpen(false)}>
