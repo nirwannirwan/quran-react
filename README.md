@@ -1,4 +1,4 @@
-# Mosaic React
+# Quran React
 
 React landing page template designed by Cruip.
 
